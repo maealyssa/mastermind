@@ -1,48 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mastermind</title>
-</head>
-<body class="page">
-  <div class="page__content">
-    <h1>Mastermind</h1>
-    <h2>Attempts remaining:<span></span></h2>
-
-    <form class="userForm" action="" >
-        <input
-          class="userForm__input"
-          type="number"
-          min="0"
-          max="8"
-          required
-        />
-        <input
-          class="userForm__input"
-          type="number"
-          min="0"
-          max="8"
-          required
-        />
-        <input
-          class="userForm__input"
-          type="number"
-          min="0"
-          max="8"
-          required
-        />
-        <input
-          class="userForm__input"
-          type="number"
-          min="0"
-          max="8"
-          required
-        />
-        <button type="submit">submit</button>
-      </form>
-
-      <div></div>
+  </head>
+  <body class="page">
+    <div class="page__content">
+      <h1>Mastermind</h1>
+      <h2>Attempts remaining:<span class="attemptsLeft"></span></h2>
+      <div class="userForm">
+        <form class="form">
+          <input
+            class="userForm__input"
+            name-="p1"
+            type="number"
+            min="0"
+            max="8"
+            maxlength="1"
+            required
+          />
+          <input
+            class="userForm__input"
+            name-="p2"
+            type="number"
+            min="0"
+            max="8"
+            maxlength="1"
+            required
+          />
+          <input
+            class="userForm__input"
+            name-="p3"
+            type="number"
+            min="0"
+            max="8"
+            maxlength="1"
+            required
+          />
+          <input
+            class="userForm__input"
+            name-="p4"
+            type="number"
+            min="0"
+            max="8"
+            maxlength="1"
+            required
+          />
+          <button type="submit" class="submitBtn">Submit</button>
+          <button type="" class="newGameBtn">New Game</button>
+        </form>
+      </div>
+      <div class="computerFeedback"></div>
+      <div class="historyLog"></div>
     </div>
-</body>
+    <template id="historyInput-template">
+      <li class="historyInput">
+        <p class="historyInput__nums"></p>
+        <p class="historyInput__feedback"></p>
+      </li>
+    </template>
+  </body>
 </html>

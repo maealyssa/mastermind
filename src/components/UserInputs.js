@@ -1,9 +1,27 @@
 export default class UserInputs {
-    constructor() {
-        this._formInputs = this._popup.querySelectorAll("userForm__input");
-    }
+  constructor(handleFormSubmit) {
+    this._formDiv = document.querySelector(".userForm")
+    this._form = this._formDiv.querySelector(".form")
+    this._formInputs = document.querySelectorAll("input");
+    this._handleFormSubmit = handleFormSubmit;
+  }
 
-    _getInputValues() {
-        
-    }
+  setEventListeners() {
+    this._formDiv.addEventListener('submit', (evt) => {
+        evt.preventDefault()
+        this._handleFormSubmit(this._getInputValues());
+    })
+  }
+
+  _getInputValues() {
+    const inputObject = [];
+
+    this._formInputs.forEach(input => {
+      inputObject.push(input.value)
+    });
+
+    console.log(inputObject);
+    return inputObject;
+  }
+
 }
