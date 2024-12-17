@@ -1,7 +1,7 @@
 {
-  "name": "Mastermind",
+  "name": "mastermind",
   "version": "0.1.0",
-  "description": "A picture sharing site.",
+  "description": "A game guessing random numbers",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
