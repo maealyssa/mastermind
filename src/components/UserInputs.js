@@ -9,7 +9,7 @@ export default class UserInputs {
   setEventListeners() {
     this._formDiv.addEventListener("submit", (evt) => {
       evt.preventDefault();
-      this._handleFormSubmit(this._getInputValues());
+      this._handleFormSubmit(this.getInputValues());
     });
   }
 
@@ -17,14 +17,13 @@ export default class UserInputs {
     this._form.reset();
   }
 
-  _getInputValues() {
+  getInputValues() {
     const inputObject = [];
 
     this._formInputs.forEach((input) => {
       inputObject.push(input.value);
     });
 
-    console.log(inputObject);
     return inputObject;
   }
 }
