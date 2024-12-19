@@ -13,9 +13,10 @@ Clone 'mastermind' from Github
 `git clone https://github.com/maealyssa/mastermind.git`
 
 Running Mastermind:
-`cd mastermind
+```cd mastermind
 npm install
 npm run build
-npm run dev`
+npm run dev
+```
 
 Users will be directed to a localhost on their browser that allows them to run inputs for their guesses.
